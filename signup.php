@@ -15,6 +15,9 @@ session_start();
     <!-- Checks if player names are actually there -->
     <?php if(isset($_POST['player_name'])): ?>
         <?php $_SESSION['players'] = $_POST['player_name'];
+        $_SESSION['scores'] = array_fill(0, $_SESSION['num'], 0);
+        $_SESSION['current_player'] = 0;
+        $_SESSION['claimed'] = [];
         header('Location: lobby.php');
         exit();
         ?>
