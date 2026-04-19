@@ -37,6 +37,8 @@ $_SESSION['num'] = $num;
 $_SESSION['scores'] = array_fill(0, $num, 0);
 $_SESSION['current_player'] = 0;
 $_SESSION['claimed'] = [];
+$_SESSION['ai_diff'] = 2;
+$_SESSION['recent'] = [];
 ?>
 
 <!DOCTYPE html>
@@ -44,19 +46,24 @@ $_SESSION['claimed'] = [];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lobby</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
-    <?php
-    $player_num = 1;
-    foreach($players as $player) {
-        echo "Player $player_num: $player<br>";
-        $player_num++;
-    }
-    ?>
+    <div class="lobby_box">
+        <?php
+        $player_num = 1;
+        foreach($players as $player) {
+            echo "<div class='player_row'>";
+            echo "<div class='player_num_box'>Player $player_num:</div>";
+            echo "<div class='player_name_box'>$player</div>";
+            echo "</div>";
+            $player_num++;
+        }
+        ?>
 
-    <a href="board.php">Start Game</a>
-
+        <a href="board.php" class="lobby_button">Start Game</a>
+    </div>
 </body>
 </html>

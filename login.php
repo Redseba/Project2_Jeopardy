@@ -26,21 +26,24 @@ if (isset($_POST['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Login</h2>
+    <div class="login_container">
+        <h2>Login</h2>
 
-    <!-- Check if Invalid Info has been inputted -->
-    <?php if (isset($error)): ?>
-        <p><?php echo $error; ?></p>
-    <?php endif; ?>
+        <!-- Check if Invalid Info has been inputted -->
+        <?php if (isset($error)): ?>
+            <p><?php echo $error; ?></p>
+        <?php endif; ?>
 
-    <!-- Input Field -->
-    <form method="post">
-        Username: <input type='text' name='username'><br>
-        Password: <input type='text' name='password'><br>
-        <input type='submit' value='Login'>
-    </form>
-    <a href="registration.php">Register Here!</a>
+        <!-- Input Field -->
+        <form method="post">
+            Username: <input type='text' name='username'><br>
+            Password: <input type='text' name='password'><br>
+            <input type='submit' value='Login'>
+        </form>
+        <a href="registration.php">Register Here!</a>
+    </div>
 </body>
 </html>

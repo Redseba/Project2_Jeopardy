@@ -1,22 +1,165 @@
-.board {
-    display: inline-grid;
-    grid-template-columns: repeat(5, 1fr);
-    margin: 200px;
+body {
+    background-color: #4B0082;
+    color: white;
+}
+a {
+    color: #FFD700;
+}
+a:visited {
+    color: #C0C0C0;
+}
+
+/* Login Page Rules */
+.login_container {
+    width: 350px;
+    margin: 100px auto;
+    padding: 40px;
+    border: 5px solid gold;
+    text-align: center;
+    background-color: #3a0070;
+}
+
+.login_container h2 {
+    color: #FFD700;
     margin-bottom: 20px;
-    border: 5px solid black;
+}
+
+.login_container input[type='text'],
+.login_container input[type='password'] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #4B0082;
+    border: 2px solid gold;
+    color: white;
+}
+
+.login_container input[type='submit'] {
+    width: 85%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #FFD700;
+    color: #4B0082;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login_container a {
+    display: block;
+    margin-top: 15px;
+    color: #FFD700;
+}
+
+/* Registration Page Rules */
+.register {
+    width: 350px;
+    margin: 100px auto;
+    padding: 40px;
+    border: 5px solid gold;
+    text-align: center;
+    background-color: #3a0070;
+}
+
+.register h2 {
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.register input[type='text'],
+.register input[type='password'] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #4B0082;
+    border: 2px solid gold;
+    color: white;
+}
+
+.register input[type='submit'] {
+    width: 85%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #FFD700;
+    color: #4B0082;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register a {
+    display: block;
+    margin-top: 15px;
+    color: #FFD700;
+}
+
+/* Lobby Related Rules */
+.lobby_box {
+    width: 50%;
+    margin: 100px auto;
+    padding: 40px;
+    border: 5px solid gold;
+    text-align: center;
+    background-color: #3a0070;
+}
+.player_num_box {
+    border: 5px solid gold;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+}
+.player_row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: 10px;
+    margin-bottom: 10px;
+}
+.player_name_box {
+    border: 5px solid gold;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.lobby_button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #FFD700;
+    color: #4B0082;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border: 3px solid gold;
+}
+.lobby_button:visited {
+    color: #4B0082;
+}
+/* Board Page Related Rules */
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: fit-content;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    border: 5px solid gold;
+    gap: 10px;
+    padding: 20px;
 }
 .category_column {
     display: grid;
     grid-template-rows: repeat(5, 1fr);
-    border: 5px solid black;
+    gap: 5px
 }
 .header {
     width: 100px;
     height: 100px;
     align-content: center;
     justify-content: center;
-    border: 5px solid black;
+    border: 5px solid gold;
+    text-align: center;
     padding: auto;
 }
 .question_block {
@@ -24,15 +167,125 @@
     height: 100px;
     align-content: center;
     justify-content: center;
-    border: 5px solid black;
+    border: 5px solid gold;
     padding: auto;
+    text-align: center;
 }
 .question_box {
     width: 50%;
-    height: 200px;
+    height: 100px;
     align-content: center;
     justify-content: center;
-    border: 5px solid black;
-    padding: 25px;
+    text-align: center;
+    border: 5px solid gold;
+    padding: 20px;
     margin: 0px auto;
+}
+.ai_badge {
+    text-align: center;
+    margin: 10px auto;
+    width: 200px;
+    padding: 10px;
+    border: 3px solid gold;
+    color: #FFD700;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Player Display Rules */
+.player_grid {
+    margin: 20px auto;
+    display: grid;
+    gap: 10px;
+    width:50%;
+    height: 50px;
+    border: 5px solid gold;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px
+}
+.player_box {
+    gap: 2px;
+    width:auto;
+    height: auto;
+    border: 5px solid gold;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Leader Board Rules */
+.leaderboard_title {
+    text-align: center;
+    color: #FFD700;
+    margin-top: 40px;
+}
+
+.podium {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 100px;
+    margin-top: 40px;
+}
+
+.podium_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.podium_position {
+    color: #FFD700;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.podium_name {
+    color: white;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.podium_score {
+    color: #FFD700;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.podium_bar {
+    width: 100%;
+    background-color: #FFD700;
+    color: #4B0082;
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.podium_base {
+    height: 10px;
+    background-color: #FFD700;
+    margin: 0 100px;
+    border-radius: 5px;
+}
+
+.play_again {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 15px;
+    background-color: #FFD700;
+    color: #4B0082;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.play_again:visited {
+    color: #4B0082;
 }

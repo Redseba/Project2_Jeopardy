@@ -35,22 +35,25 @@ if (isset($_POST['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Registration</h2>
+    <div class="register">
+        <h2>Registration</h2>
 
-    <!-- Checks if passwords match -->
-    <?php if (isset($error)): ?>
-        <p><?php echo $error; ?></p>
-    <?php endif; ?>
+        <!-- Checks if passwords match -->
+        <?php if (isset($error)): ?>
+            <p><?php echo $error; ?></p>
+        <?php endif; ?>
 
-    <!-- Input Field -->
-    <form method="post">
-        Username: <input type="text" name="username"><br>
-        Password: <input type="password" name="password"><br>
-        Confirm Password: <input type="password" name="confirm"><br>
-        <input type="submit" value="Register">
-    </form>
-    <a href="login.php">Already have an account? Login</a>
+        <!-- Input Field -->
+        <form method="post">
+            Username: <input type="text" name="username"><br>
+            Password: <input type="password" name="password"><br>
+            Confirm Password: <input type="password" name="confirm"><br>
+            <input type="submit" value="Register">
+        </form>
+        <a href="login.php">Already have an account? Login</a>
+    </div>
 </body>
 </html>
